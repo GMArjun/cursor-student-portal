@@ -1,6 +1,6 @@
-# Bootstrap 5.3.7 Project
+# Student Portal Project
 
-A simple, clean Bootstrap 5.3.7 project using minified CSS and your own custom SCSS.
+A simple, clean Student Portal project using minified CSS and your own custom SCSS.
 
 ## Project Structure
 
@@ -9,7 +9,7 @@ Design/
 ├── index.html              # Main HTML file
 ├── assets/
 │   ├── css/
-│   │   ├── bootstrap.min.css    # Bootstrap 5.3.7 minified CSS
+│   │   ├── bootstrap.min.css    # Student Portal minified CSS
 │   │   └── custom.css           # Custom styles (compiled from SCSS)
 │   ├── scss/
 │   │   └── custom.scss          # Your SCSS for development
