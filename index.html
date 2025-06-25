@@ -103,7 +103,7 @@
                                     <button
                                         class="btn btn-light d-flex align-items-center justify-content-center rounded-circle p-0"
                                         style="width:40px; height:40px;" data-bs-toggle="modal"
-                                        data-bs-target="#taskModal"><i class="bi bi-plus"></i></button>
+                                        data-bs-target="#addTaskModal"><i class="bi bi-plus"></i></button>
                                 </div>
                                 <div class="mb-3">
                                     <ul class="nav nav-pills gap-2">
@@ -121,12 +121,7 @@
                                                 <div class="text-muted small">English Literature</div>
                                                 <div class="text-muted small">Apr 28, 2025</div>
                                             </div>
-                                            <span class="badge bg-warning text-dark">In progress</span>
                                         </div>
-                                        <div class="progress mt-2" style="height: 8px;">
-                                            <div class="progress-bar bg-success" style="width: 60%;"></div>
-                                        </div>
-                                        <div class="text-muted small mt-1">12 comments</div>
                                     </div>
                                     <div class="dashboard-task mb-4">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -137,7 +132,6 @@
                                             </div>
                                             <span class="badge bg-purple">To do</span>
                                         </div>
-                                        <div class="text-muted small mt-1">No comments</div>
                                     </div>
                                     <div class="dashboard-task mb-4">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -148,7 +142,6 @@
                                             </div>
                                             <span class="badge bg-purple">To do</span>
                                         </div>
-                                        <div class="text-muted small mt-1">2 comments</div>
                                     </div>
                                     <div class="dashboard-task mb-4">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -159,7 +152,6 @@
                                             </div>
                                             <span class="badge bg-purple">To do</span>
                                         </div>
-                                        <div class="text-muted small mt-1">12 comments</div>
                                     </div>
                                     <div class="dashboard-task">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -170,10 +162,9 @@
                                             </div>
                                             <span class="badge bg-purple">To do</span>
                                         </div>
-                                        <div class="text-muted small mt-1">3 comments</div>
                                     </div>
                                 </div>
-                                <div class="text-center mt-3">
+                                <div class="text-center pt-3 mt-auto">
                                     <button class="btn btn-outline-secondary rounded-pill">View all tasks</button>
                                 </div>
                             </div>
@@ -188,22 +179,23 @@
                                 <div class="row g-3 my-courses-list">
                                     <!-- Course Card 1 -->
                                     <div class="col-12 col-sm-6 col-lg-6">
-                                        <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
-                                            <div class="w-100 mb-2">
-                                                <img src="https://placehold.co/600x400.png" alt="Math" class="rounded-3 w-100" style="height: 90px; object-fit: cover;">
+                                        <div
+                                            class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
+                                            <div class="w-100 mb-2 ratio ratio-4x3">
+                                                <img src="https://placehold.co/600x400.png" alt="Math"
+                                                    class="rounded-3 w-100 h-100" style="object-fit: cover;">
                                             </div>
                                             <div class="fw-semibold mb-1">Algebra Basics</div>
                                             <span class="badge bg-success mb-2">In Progress</span>
-                                            <div class="progress w-100" style="height: 6px;">
-                                                <div class="progress-bar bg-success" style="width: 60%"></div>
-                                            </div>
                                         </div>
                                     </div>
                                     <!-- Course Card 2 -->
                                     <div class="col-12 col-sm-6 col-lg-6">
-                                        <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
-                                            <div class="w-100 mb-2">
-                                                <img src="https://placehold.co/600x400.png" alt="Biology" class="rounded-3 w-100" style="height: 90px; object-fit: cover;">
+                                        <div
+                                            class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
+                                            <div class="w-100 mb-2 ratio ratio-4x3">
+                                                <img src="https://placehold.co/600x400.png" alt="Biology"
+                                                    class="rounded-3 w-100 h-100" style="object-fit: cover;">
                                             </div>
                                             <div class="fw-semibold mb-1">Biology 101</div>
                                             <span class="badge bg-secondary mb-2">Not Started</span>
@@ -275,39 +267,47 @@
                         </div>
                         <!-- My courses with tabs for Active and Expired -->
                         <div class="col-12 col-lg-12 d-flex flex-column">
-                            <div class="card rounded-4 p-4 flex-fill">
+                            <div class="card rounded-4 p-4 flex-fill d-flex flex-column" style="min-height: 400px;">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <h4 class="fw-bold mb-0">My courses</h4>
                                     <button class="btn btn-outline-secondary rounded-pill">View All</button>
                                 </div>
                                 <ul class="nav nav-pills mb-3 gap-2" id="coursesTab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="active-courses-tab" data-bs-toggle="pill" data-bs-target="#active-courses" type="button" role="tab" aria-controls="active-courses" aria-selected="true">Active Courses</button>
+                                        <button class="nav-link active" id="active-courses-tab" data-bs-toggle="pill"
+                                            data-bs-target="#active-courses" type="button" role="tab"
+                                            aria-controls="active-courses" aria-selected="true">Active Courses</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="expired-courses-tab" data-bs-toggle="pill" data-bs-target="#expired-courses" type="button" role="tab" aria-controls="expired-courses" aria-selected="false">Expired Courses</button>
+                                        <button class="nav-link" id="expired-courses-tab" data-bs-toggle="pill"
+                                            data-bs-target="#expired-courses" type="button" role="tab"
+                                            aria-controls="expired-courses" aria-selected="false">Expired
+                                            Courses</button>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="coursesTabContent">
                                     <!-- Active Courses -->
-                                    <div class="tab-pane fade show active" id="active-courses" role="tabpanel" aria-labelledby="active-courses-tab">
+                                    <div class="tab-pane fade show active" id="active-courses" role="tabpanel"
+                                        aria-labelledby="active-courses-tab">
                                         <div class="row g-3 my-courses-list">
                                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
-                                                    <div class="w-100 mb-2">
-                                                        <img src="https://placehold.co/600x400.png" alt="Math" class="rounded-3 w-100" style="height: 90px; object-fit: cover;">
+                                                <div
+                                                    class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
+                                                    <div class="w-100 mb-2 ratio ratio-4x3">
+                                                        <img src="https://placehold.co/600x400.png" alt="Math"
+                                                            class="rounded-3 w-100 h-100" style="object-fit: cover;">
                                                     </div>
                                                     <div class="fw-semibold mb-1">Algebra Basics</div>
                                                     <span class="badge bg-success mb-2">In Progress</span>
-                                                    <div class="progress w-100" style="height: 6px;">
-                                                        <div class="progress-bar bg-success" style="width: 60%"></div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
-                                                    <div class="w-100 mb-2">
-                                                        <img src="https://placehold.co/600x400.png" alt="Biology" class="rounded-3 w-100" style="height: 90px; object-fit: cover;">
+                                                <div
+                                                    class="course-card card p-3 rounded-4 d-flex flex-column align-items-start">
+                                                    <div class="w-100 mb-2 ratio ratio-4x3">
+                                                        <img src="https://placehold.co/600x400.png" alt="Biology"
+                                                            class="rounded-3 w-100 h-100" style="object-fit: cover;">
                                                     </div>
                                                     <div class="fw-semibold mb-1">Biology 101</div>
                                                     <span class="badge bg-secondary mb-2">Not Started</span>
@@ -316,21 +316,28 @@
                                         </div>
                                     </div>
                                     <!-- Expired Courses -->
-                                    <div class="tab-pane fade" id="expired-courses" role="tabpanel" aria-labelledby="expired-courses-tab">
+                                    <div class="tab-pane fade" id="expired-courses" role="tabpanel"
+                                        aria-labelledby="expired-courses-tab">
                                         <div class="row g-3 my-courses-list">
                                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start expired-course">
-                                                    <div class="w-100 mb-2">
-                                                        <img src="https://placehold.co/600x400.png" alt="English" class="rounded-3 w-100" style="height: 90px; object-fit: cover; opacity: 0.6;">
+                                                <div
+                                                    class="course-card card p-3 rounded-4 d-flex flex-column align-items-start expired-course">
+                                                    <div class="w-100 mb-2 ratio ratio-4x3">
+                                                        <img src="https://placehold.co/600x400.png" alt="English"
+                                                            class="rounded-3 w-100 h-100"
+                                                            style="object-fit: cover; opacity: 0.6;">
                                                     </div>
                                                     <div class="fw-semibold mb-1">English Literature</div>
                                                     <span class="badge bg-danger mb-2">Expired</span>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="course-card card p-3 rounded-4 d-flex flex-column align-items-start expired-course">
-                                                    <div class="w-100 mb-2">
-                                                        <img src="https://placehold.co/600x400.png" alt="History" class="rounded-3 w-100" style="height: 90px; object-fit: cover; opacity: 0.6;">
+                                                <div
+                                                    class="course-card card p-3 rounded-4 d-flex flex-column align-items-start expired-course">
+                                                    <div class="w-100 mb-2 ratio ratio-4x3">
+                                                        <img src="https://placehold.co/600x400.png" alt="History"
+                                                            class="rounded-3 w-100 h-100"
+                                                            style="object-fit: cover; opacity: 0.6;">
                                                     </div>
                                                     <div class="fw-semibold mb-1">World History</div>
                                                     <span class="badge bg-danger mb-2">Expired</span>
@@ -341,75 +348,326 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Task Management Page -->
+                        <div class="col-12 col-lg-12">
+                            <div class="card p-4 rounded-4" style="min-height: 400px;">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
+                                    <h4 class="fw-bold mb-0">Task Management</h4>
+                                    <button class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                        data-bs-target="#addTaskModal"><i class="bi bi-plus-lg me-2"></i>Add
+                                        Task</button>
+                                </div>
+                                <ul class="nav nav-pills mb-3 gap-2" id="taskFilterTab" role="tablist">
+                                    <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill"
+                                            data-bs-target="#all-tasks" type="button">All</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#todo-tasks" type="button">To-do</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#pending-tasks" type="button">Pending</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#inprogress-tasks" type="button">In Progress</button>
+                                    </li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                                            data-bs-target="#resolved-tasks" type="button">Resolved</button></li>
+                                </ul>
+                                <div class="tab-content" id="taskTabContent">
+                                    <div class="tab-pane fade show active" id="all-tasks">
+                                        <div class="table-responsive">
+                                            <table class="table align-middle mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Title</th>
+                                                        <th>Description</th>
+                                                        <th>Status</th>
+                                                        <th>Assigned Mentor</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Prepare for the math test</td>
+                                                        <td>Need help with algebra concepts and practice problems.
+                                                        </td>
+                                                        <td><span class="badge bg-primary">To-do</span></td>
+                                                        <td>Ms. Melton</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Science project submission</td>
+                                                        <td>Guidance required for project structure and research.
+                                                        </td>
+                                                        <td><span class="badge bg-warning text-dark">Pending</span>
+                                                        </td>
+                                                        <td>Unassigned</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Essay review</td>
+                                                        <td>Need feedback on English essay draft.</td>
+                                                        <td><span class="badge bg-info text-dark">In Progress</span>
+                                                        </td>
+                                                        <td>Mr. Hodge</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lab report correction</td>
+                                                        <td>Requesting corrections for last week's lab report.</td>
+                                                        <td><span class="badge bg-success">Resolved</span></td>
+                                                        <td>Ms. Murray</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Schedules Management (Student Portal) -->
+                        <div class="col-12 col-lg-12">
+                            <div class="card p-4 rounded-4">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
+                                    <h4 class="fw-bold mb-0">Schedules Management</h4>
+                                </div>
+                                <ul class="nav nav-pills mb-3 gap-2" id="schedulesTab" role="tablist">
+                                    <li class="nav-item"><button class="nav-link active" id="upcoming-tab"
+                                            data-bs-toggle="pill" data-bs-target="#upcoming-schedules" type="button"
+                                            role="tab" aria-controls="upcoming-schedules" aria-selected="true">Upcoming
+                                            Schedules</button></li>
+                                    <li class="nav-item"><button class="nav-link" id="expired-tab" data-bs-toggle="pill"
+                                            data-bs-target="#expired-schedules" type="button" role="tab"
+                                            aria-controls="expired-schedules" aria-selected="false">Expired
+                                            Schedules</button></li>
+                                </ul>
+                                <div class="tab-content" id="schedulesTabContent">
+                                    <!-- Upcoming Schedules -->
+                                    <div class="tab-pane fade show active" id="upcoming-schedules" role="tabpanel"
+                                        aria-labelledby="upcoming-tab">
+                                        <div class="table-responsive">
+                                            <table class="table align-middle mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date & Time</th>
+                                                        <th>Mentor Name</th>
+                                                        <th>Title of Session</th>
+                                                        <th>Join Meeting</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>June 10, 2024, 10:00 AM</td>
+                                                        <td>Ms. Melton</td>
+                                                        <td>Algebra Doubt Clearing</td>
+                                                        <td><a href="#"
+                                                                class="btn btn-primary btn-sm rounded-pill">Join</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>June 12, 2024, 2:00 PM</td>
+                                                        <td>Mr. Hodge</td>
+                                                        <td>Science Project Guidance</td>
+                                                        <td><a href="#"
+                                                                class="btn btn-primary btn-sm rounded-pill">Join</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- Expired Schedules -->
+                                    <div class="tab-pane fade" id="expired-schedules" role="tabpanel"
+                                        aria-labelledby="expired-tab">
+                                        <div class="table-responsive">
+                                            <table class="table align-middle mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date & Time</th>
+                                                        <th>Mentor Name</th>
+                                                        <th>Title of Session</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>May 28, 2024, 11:00 AM</td>
+                                                        <td>Ms. Murray</td>
+                                                        <td>Essay Review</td>
+                                                        <td><span class="badge bg-secondary">Expired</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>May 20, 2024, 9:00 AM</td>
+                                                        <td>Ms. Melton</td>
+                                                        <td>Math Test Prep</td>
+                                                        <td><span class="badge bg-secondary">Expired</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mentorship Module (Student View) -->
+                        <div class="col-12">
+                            <div class="card p-4 rounded-4">
+                                <h4 class="fw-bold mb-3">Mentorship</h4>
+                                <div class="row g-2">
+                                    <!-- Mentor Profile -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="card p-3 rounded-4 text-center h-100 d-flex align-items-center">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor"
+                                                class="rounded-circle mb-3" width="90" height="90">
+                                            <h5 class="fw-bold mb-1">Mr. Hodge</h5>
+                                            <div class="text-muted mb-2">Senior Science Mentor</div>
+                                            <div class="mb-2 small">10+ years experience in STEM education, passionate
+                                                about helping students excel in science and research projects.</div>
+                                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                                <span class="badge bg-primary">Biology</span>
+                                                <span class="badge bg-primary">Chemistry</span>
+                                                <span class="badge bg-primary">Research</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Schedule a Call -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="card p-3 rounded-4 h-100">
+                                            <h6 class="fw-bold mb-2">Schedule a Call</h6>
+                                            <form>
+                                                <div class="mb-2">
+                                                    <label class="form-label">Date</label>
+                                                    <input type="date" class="form-control" required>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label class="form-label">Start Time</label>
+                                                    <input type="time" class="form-control" required>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label class="form-label">End Time</label>
+                                                    <input type="time" class="form-control" required>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label class="form-label">Available Slots</label>
+                                                    <select class="form-select">
+                                                        <option>10:00 AM - 10:30 AM</option>
+                                                        <option>2:00 PM - 2:30 PM</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn btn-primary rounded-pill w-100 mb-2">Book
+                                                    Session</button>
+                                                <button type="button"
+                                                    class="btn btn-outline-secondary rounded-pill w-100"
+                                                    data-bs-toggle="modal" data-bs-target="#customRequestModal">Custom
+                                                    Request</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- Direct Chat -->
+                                    <div class="col-12 col-md-4">
+                                        <div class="card p-3 rounded-4 h-100 d-flex flex-column">
+                                            <h6 class="fw-bold mb-2">Direct Chat</h6>
+                                            <div class="flex-grow-1 mb-2"
+                                                style="max-height: 100%; overflow-y: auto; background: #f6f7fb; border-radius: 1rem; padding: 0.5rem;">
+                                                <div class="mb-2 text-end">
+                                                    <span class="badge bg-primary text-wrap text-start fw-normal"
+                                                        style="max-width: 80%;">Hi Mentor, can you help with my
+                                                        project? Lorem ipsum dolor sit amet consectetur adipisicing
+                                                        elit. Illum, harum.</span>
+                                                </div>
+                                                <div class="mb-2 text-start">
+                                                    <span
+                                                        class="badge bg-white text-dark text-wrap text-start fw-normal"
+                                                        style="max-width: 80%;">Of course! Let's discuss your
+                                                        ideas.</span>
+                                                </div>
+                                                <div class="mb-2 text-end">
+                                                    <span class="badge bg-primary text-wrap text-start fw-normal"
+                                                        style="max-width: 80%;">Thank you!</span>
+                                                </div>
+                                            </div>
+                                            <form class="d-flex gap-2 mt-auto">
+                                                <input type="text" class="form-control rounded-pill"
+                                                    placeholder="Type a message...">
+                                                <button class="btn btn-primary rounded-pill" type="submit"><i
+                                                        class="bi bi-send"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Custom Request Modal -->
+                            <div class="modal fade" id="customRequestModal" tabindex="-1"
+                                aria-labelledby="customRequestModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="customRequestModalLabel">Custom Mentorship
+                                                Request</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Preferred Date & Time</label>
+                                                    <input type="datetime-local" class="form-control" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Request Details</label>
+                                                    <textarea class="form-control" rows="3" required
+                                                        placeholder="Describe your request..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary rounded-pill"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary rounded-pill">Submit
+                                                    Request</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <!-- Add Task Modal -->
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="taskModalLabel">Add New Task</h5>
+                    <h5 class="modal-title" id="addTaskModalLabel">Add New Task</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <input type="text" class="form-control mb-3" placeholder="Task title">
-                    <textarea class="form-control" rows="3" placeholder="Task details"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Add Task</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-4">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="noteModalLabel">Add New Note</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" class="form-control mb-3" placeholder="Note title">
-                    <textarea class="form-control" rows="3" placeholder="Note details"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Add Note</button>
-                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="taskTitle" class="form-label">Task Title <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="taskTitle" minlength="3" maxlength="100"
+                                required placeholder="Enter task title">
+                            <div class="form-text">Min 3 characters, Max 100 characters
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taskDesc" class="form-label">Task Description <span
+                                    class="text-danger">*</span></label>
+                            <textarea class="form-control" id="taskDesc" rows="3" minlength="3" maxlength="100" required
+                                placeholder="Enter task description"></textarea>
+                            <div class="form-text">Min 3 characters, Max 100 characters
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary rounded-pill">Add
+                            Task</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        // Sidebar toggle for mobile
-        const sidebar = document.getElementById('sidebar');
-        const sidebarToggle = document.getElementById('sidebarToggle');
-        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
-
-        function openSidebar() {
-            sidebar.classList.add('sidebar-open');
-            sidebarBackdrop.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeSidebar() {
-            sidebar.classList.remove('sidebar-open');
-            sidebarBackdrop.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        if (sidebarToggle) {
-            sidebarToggle.addEventListener('click', openSidebar);
-        }
-        if (sidebarBackdrop) {
-            sidebarBackdrop.addEventListener('click', closeSidebar);
-        }
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 992) closeSidebar();
-        });
-    </script>
 </body>
 
 </html>
