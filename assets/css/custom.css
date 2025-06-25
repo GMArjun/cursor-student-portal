@@ -7,6 +7,7 @@ html body {
   font-weight: 400;
   color: #495057;
   line-height: 1.6;
+  background: #f5f6fa;
 }
 
 .dashboard-bg {
@@ -44,11 +45,11 @@ html body {
   padding: 0.75rem 1.25rem;
 }
 .dashboard-sidebar .nav-link.active, .dashboard-sidebar .nav-link:hover {
-  background: #22223b;
+  background: #2d3a4a;
   color: #fff;
 }
 .dashboard-sidebar .badge.bg-purple {
-  background: #f8954f;
+  background: #7c3aed;
   color: #fff;
   font-size: 0.85em;
   padding: 0.4em 0.7em;
@@ -570,6 +571,40 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 
 .text-primary {
   color: #f8954f !important;
+}
+
+h1, h2, h3, h4, h5, h6, .fw-bold, .section-title, .dashboard-header h4, .card h4, .card h5, .card h6 {
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  color: #2d3a4a;
+  letter-spacing: 0.01em;
+}
+
+.dashboard-sidebar .nav-link.active, .dashboard-sidebar .nav-link:hover {
+  background: #2d3a4a;
+  color: #fff;
+}
+
+.badge.bg-purple {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.btn-info, .bg-info {
+  background-color: #4fc3f7 !important;
+  border-color: #4fc3f7 !important;
+  color: #fff !important;
+}
+
+.badge.bg-success {
+  background: #43a047 !important;
+}
+
+.chat-list .bg-primary, .chat-list .bg-success {
+  background: #7c3aed !important;
+}
+
+.card, .dashboard-header {
+  background: #fff;
 }
 
 /*# sourceMappingURL=custom.css.map */
