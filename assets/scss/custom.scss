@@ -352,6 +352,7 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 // Chat System Styles
 .chat-sidebar {
   background: #fff;
+  border-right: 1px solid #e9ecef;
   
   .chat-item {
     cursor: pointer;
@@ -656,4 +657,9 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 .form-check-input:focus {
   border-color: $primary;
   box-shadow: 0 0 0 0.15rem rgba(248, 149, 79, 0.25);
+}
+
+
+.text-primary {
+  color: $primary !important;
 }
