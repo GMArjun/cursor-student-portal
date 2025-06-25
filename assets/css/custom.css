@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  color: #495057;
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=custom.css.map */
