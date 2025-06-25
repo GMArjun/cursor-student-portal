@@ -262,4 +262,45 @@ body {
   padding-right: 2rem;
 }
 
+.my-courses-list {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #e0e3eb #fff;
+}
+
+.my-courses-list::-webkit-scrollbar {
+  height: 8px;
+  background: #fff;
+}
+
+.my-courses-list::-webkit-scrollbar-thumb {
+  background: #e0e3eb;
+  border-radius: 4px;
+}
+
+.course-card {
+  min-width: 220px;
+  max-width: 100%;
+  box-shadow: 0 2px 12px 0 rgba(60, 72, 100, 0.06);
+  border: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(60, 72, 100, 0.12);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.course-card .badge {
+  font-size: 0.85em;
+  border-radius: 1rem;
+  padding: 0.3em 0.9em;
+}
+
+.expired-course {
+  opacity: 0.6;
+  filter: grayscale(0.2);
+}
+
 /*# sourceMappingURL=custom.css.map */
