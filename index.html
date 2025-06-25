@@ -564,19 +564,21 @@
                                             <div class="flex-grow-1 mb-2"
                                                 style="max-height: 100%; overflow-y: auto; background: #f6f7fb; border-radius: 1rem; padding: 0.5rem;">
                                                 <div class="mb-2 text-end">
-                                                    <span class="badge bg-primary text-wrap text-start fw-normal"
+                                                    <span
+                                                        class="badge bg-primary text-wrap text-start fw-normal clamp-2"
                                                         style="max-width: 80%;">Hi Mentor, can you help with my
                                                         project? Lorem ipsum dolor sit amet consectetur adipisicing
                                                         elit. Illum, harum.</span>
                                                 </div>
                                                 <div class="mb-2 text-start">
                                                     <span
-                                                        class="badge bg-white text-dark text-wrap text-start fw-normal"
+                                                        class="badge bg-white text-dark text-wrap text-start fw-normal clamp-2"
                                                         style="max-width: 80%;">Of course! Let's discuss your
                                                         ideas.</span>
                                                 </div>
                                                 <div class="mb-2 text-end">
-                                                    <span class="badge bg-primary text-wrap text-start fw-normal"
+                                                    <span
+                                                        class="badge bg-primary text-wrap text-start fw-normal clamp-2"
                                                         style="max-width: 80%;">Thank you!</span>
                                                 </div>
                                             </div>
@@ -624,6 +626,344 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Chat System (Student Portal) -->
+                        <div class="col-12">
+                            <div class="card p-4 rounded-4">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h4 class="fw-bold mb-0">Chat</h4>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#newChatModal">
+                                            <i class="bi bi-plus-lg me-2"></i>New Chat
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="row g-0">
+                                    <!-- Chat List Sidebar -->
+                                    <div class="col-12 col-lg-4 border-end">
+                                        <div class="chat-sidebar p-3" style="height: 600px; overflow-y: auto;">
+                                            <!-- Chat Search -->
+                                            <div class="mb-3">
+                                                <div class="input-group">
+                                                    <span class="input-group-text bg-light border-0">
+                                                        <i class="bi bi-search text-muted"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control border-0 bg-light"
+                                                        placeholder="Search chats...">
+                                                </div>
+                                            </div>
+
+                                            <!-- Chat Filters -->
+                                            <div class="mb-3">
+                                                <ul class="nav nav-pills nav-fill gap-1">
+                                                    <li class="nav-item">
+                                                        <button class="nav-link active py-1 px-2 small">All</button>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <button class="nav-link py-1 px-2 small">One-to-One</button>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <button class="nav-link py-1 px-2 small">Group</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Chat List -->
+                                            <div class="chat-list">
+                                                <!-- One-to-One Chat -->
+                                                <div class="chat-item active p-3 rounded-3 mb-2" data-chat="one-to-one">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="position-relative">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                                alt="Mr. Hodge" class="rounded-circle" width="48"
+                                                                height="48">
+                                                            <span
+                                                                class="position-absolute bottom-0 end-0 bg-success rounded-circle"
+                                                                style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                                        </div>
+                                                        <div class="flex-grow-1 min-w-0">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start">
+                                                                <h6 class="fw-semibold mb-1 text-truncate">Mr. Hodge
+                                                                </h6>
+                                                                <small class="text-muted">2m ago</small>
+                                                            </div>
+                                                            <p class="text-muted small mb-0 clamp-2">Great! I'll review
+                                                                your project and get back to you soon.</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <span class="badge bg-primary rounded-pill">2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Group Chat -->
+                                                <div class="chat-item p-3 rounded-3 mb-2" data-chat="group">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="position-relative">
+                                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                                                                style="width: 48px; height: 48px; font-size: 14px;">
+                                                                BC
+                                                            </div>
+                                                            <span
+                                                                class="position-absolute bottom-0 end-0 bg-success rounded-circle"
+                                                                style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                                        </div>
+                                                        <div class="flex-grow-1 min-w-0">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start">
+                                                                <h6 class="fw-semibold mb-1 text-truncate">Biology Class
+                                                                </h6>
+                                                                <small class="text-muted">5m ago</small>
+                                                            </div>
+                                                            <p class="text-muted small mb-0 clamp-2">Ms. Melton: Don't
+                                                                forget to submit your lab reports by Friday!</p>
+                                                        </div>
+                                                        <div class="text-end">
+                                                            <span class="badge bg-warning rounded-pill">5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Another One-to-One Chat -->
+                                                <div class="chat-item p-3 rounded-3 mb-2" data-chat="one-to-one">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="position-relative">
+                                                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                                                alt="Mrs. Goodman" class="rounded-circle" width="48"
+                                                                height="48">
+                                                            <span
+                                                                class="position-absolute bottom-0 end-0 bg-secondary rounded-circle"
+                                                                style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                                        </div>
+                                                        <div class="flex-grow-1 min-w-0">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start">
+                                                                <h6 class="fw-semibold mb-1 text-truncate">Mrs. Goodman
+                                                                </h6>
+                                                                <small class="text-muted">1h ago</small>
+                                                            </div>
+                                                            <p class="text-muted small mb-0 clamp-2">Your math
+                                                                assignment looks great! Keep up the good work.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Another Group Chat -->
+                                                <div class="chat-item p-3 rounded-3 mb-2" data-chat="group">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="position-relative">
+                                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white fw-bold"
+                                                                style="width: 48px; height: 48px; font-size: 14px;">
+                                                                MC
+                                                            </div>
+                                                            <span
+                                                                class="position-absolute bottom-0 end-0 bg-secondary rounded-circle"
+                                                                style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                                        </div>
+                                                        <div class="flex-grow-1 min-w-0">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start">
+                                                                <h6 class="fw-semibold mb-1 text-truncate">Math Club
+                                                                </h6>
+                                                                <small class="text-muted">2h ago</small>
+                                                            </div>
+                                                            <p class="text-muted small mb-0 clamp-2">Next meeting will
+                                                                be on Wednesday at 3 PM.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Chat Messages Area -->
+                                    <div class="col-12 col-lg-8">
+                                        <div class="chat-messages-area d-flex flex-column" style="height: 600px;">
+                                            <!-- Chat Header -->
+                                            <div class="chat-header p-3 border-bottom">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="position-relative">
+                                                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                                alt="Mr. Hodge" class="rounded-circle" width="40"
+                                                                height="40">
+                                                            <span
+                                                                class="position-absolute bottom-0 end-0 bg-success rounded-circle"
+                                                                style="width: 10px; height: 10px; border: 2px solid white;"></span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="fw-semibold mb-0">Mr. Hodge</h6>
+                                                            <small class="text-muted">Online</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Messages Container -->
+                                            <div class="chat-messages flex-grow-1 p-3 d-flex flex-column"
+                                                style="overflow-y: auto; background: #f8f9fa;">
+                                                <!-- Date Separator -->
+                                                <div class="text-center mb-3">
+                                                    <span class="badge bg-light text-muted">Today</span>
+                                                </div>
+
+                                                <!-- Incoming Message -->
+                                                <div class="message incoming mb-3">
+                                                    <div class="d-flex gap-2">
+                                                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                            alt="Mr. Hodge" class="rounded-circle" width="32"
+                                                            height="32">
+                                                        <div class="message-content">
+                                                            <div
+                                                                class="message-bubble bg-white rounded-3 p-3 shadow-sm">
+                                                                <p class="mb-0">Hi Kate! How's your science project
+                                                                    coming along?</p>
+                                                            </div>
+                                                            <small class="text-muted mt-1 d-block">10:30 AM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Outgoing Message -->
+                                                <div class="message outgoing mb-3">
+                                                    <div class="d-flex gap-2 justify-content-end">
+                                                        <div class="message-content text-end">
+                                                            <div
+                                                                class="message-bubble bg-primary text-white rounded-3 p-3 shadow-sm">
+                                                                <p class="mb-0">Hi Mr. Hodge! It's going well, but I
+                                                                    have some questions about the methodology section.
+                                                                </p>
+                                                            </div>
+                                                            <small class="text-muted mt-1 d-block">10:32 AM</small>
+                                                        </div>
+                                                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                                            alt="Kate" class="rounded-circle" width="32" height="32">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Incoming Message with Image -->
+                                                <div class="message incoming mb-3">
+                                                    <div class="d-flex gap-2">
+                                                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                            alt="Mr. Hodge" class="rounded-circle" width="32"
+                                                            height="32">
+                                                        <div class="message-content">
+                                                            <div
+                                                                class="message-bubble bg-white rounded-3 p-3 shadow-sm">
+                                                                <p class="mb-2">Sure! I can help you with that. Here's a
+                                                                    reference diagram that might help:</p>
+                                                                <div
+                                                                    class="message-image rounded-2 overflow-hidden mb-2">
+                                                                    <img src="https://placehold.co/400x300/4CAF50/white?text=Science+Diagram"
+                                                                        alt="Science Diagram" class="w-100">
+                                                                </div>
+                                                            </div>
+                                                            <small class="text-muted mt-1 d-block">10:35 AM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Outgoing Message -->
+                                                <div class="message outgoing mb-3">
+                                                    <div class="d-flex gap-2 justify-content-end">
+                                                        <div class="message-content text-end">
+                                                            <div
+                                                                class="message-bubble bg-primary text-white rounded-3 p-3 shadow-sm">
+                                                                <p class="mb-0">Perfect! This is exactly what I needed.
+                                                                    Thank you so much!</p>
+                                                            </div>
+                                                            <small class="text-muted mt-1 d-block">10:37 AM</small>
+                                                        </div>
+                                                        <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                                            alt="Kate" class="rounded-circle" width="32" height="32">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Incoming Message -->
+                                                <div class="message incoming mb-3">
+                                                    <div class="d-flex gap-2">
+                                                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                            alt="Mr. Hodge" class="rounded-circle" width="32"
+                                                            height="32">
+                                                        <div class="message-content">
+                                                            <div
+                                                                class="message-bubble bg-white rounded-3 p-3 shadow-sm">
+                                                                <p class="mb-0">Great! I'll review your project and get
+                                                                    back to you soon.</p>
+                                                            </div>
+                                                            <small class="text-muted mt-1 d-block">10:38 AM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Typing Indicator -->
+                                                <div class="message incoming">
+                                                    <div class="d-flex gap-2">
+                                                        <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                                            alt="Mr. Hodge" class="rounded-circle" width="32"
+                                                            height="32">
+                                                        <div class="message-content">
+                                                            <div
+                                                                class="message-bubble bg-white rounded-3 p-3 shadow-sm">
+                                                                <div class="typing-indicator d-flex gap-1">
+                                                                    <div class="typing-dot bg-dark rounded-circle"
+                                                                        style="width: 8px; height: 8px; animation: typing 1.4s infinite ease-in-out;">
+                                                                    </div>
+                                                                    <div class="typing-dot bg-dark rounded-circle"
+                                                                        style="width: 8px; height: 8px; animation: typing 1.4s infinite ease-in-out 0.2s;">
+                                                                    </div>
+                                                                    <div class="typing-dot bg-dark rounded-circle"
+                                                                        style="width: 8px; height: 8px; animation: typing 1.4s infinite ease-in-out 0.4s;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Message Input -->
+                                            <div class="chat-input p-3 border-top">
+                                                <div class="d-flex gap-2 align-items-center">
+                                                    <button class="btn btn-light rounded-circle"
+                                                        style="width: 40px; height: 40px;" id="attachFileBtn"
+                                                        title="Attach Image">
+                                                        <i class="bi bi-image"></i>
+                                                    </button>
+                                                    <div class="flex-grow-1">
+                                                        <textarea class="form-control border-0 bg-light rounded-pill"
+                                                            rows="1" placeholder="Type a message..."
+                                                            style="resize: none; padding: 12px 20px;"></textarea>
+                                                    </div>
+                                                    <button class="btn btn-primary rounded-circle"
+                                                        style="width: 40px; height: 40px;">
+                                                        <i class="bi bi-send"></i>
+                                                    </button>
+                                                </div>
+
+                                                <!-- File Upload Input (Hidden) -->
+                                                <input type="file" id="fileInput" accept="image/*"
+                                                    style="display: none;">
+
+                                                <!-- File Preview (Hidden by default) -->
+                                                <div class="file-preview mt-2" style="display: none;">
+                                                    <div class="d-flex align-items-center gap-2 p-2 bg-light rounded-3">
+                                                        <i class="bi bi-image text-primary"></i>
+                                                        <span class="small">image.jpg</span>
+                                                        <button class="btn btn-sm btn-outline-danger ms-auto"
+                                                            id="removeFileBtn">
+                                                            <i class="bi bi-x"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
@@ -661,6 +1001,124 @@
                             data-bs-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary rounded-pill">Add
                             Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Chat Modal -->
+    <div class="modal fade" id="newChatModal" tabindex="-1" aria-labelledby="newChatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newChatModalLabel">Start New Chat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <!-- Chat Type Selection -->
+                        <div class="mb-4 radio-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="chatType" id="oneToOneChat"
+                                    value="one-to-one" checked>
+                                <label class="form-check-label" for="oneToOneChat">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="bi bi-person"></i>
+                                        <span>One-to-One</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="chatType" id="groupChat"
+                                    value="group">
+                                <label class="form-check-label" for="groupChat">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="bi bi-people"></i>
+                                        <span>Group Chat</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- One-to-One Chat Options -->
+                        <div id="oneToOneOptions">
+                            <div class="mb-3">
+                                <label for="mentorSelect" class="form-label">Select Mentor</label>
+                                <select class="form-select" id="mentorSelect" required>
+                                    <option value="">Choose a mentor...</option>
+                                    <option value="hodge">Mr. Hodge - Biology & Chemistry</option>
+                                    <option value="goodman">Mrs. Goodman - Mathematics</option>
+                                    <option value="melton">Ms. Melton - English Literature</option>
+                                    <option value="murray">Mrs. Murray - Social Studies</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Group Chat Options -->
+                        <div id="groupOptions" style="display: none;">
+                            <div class="mb-3">
+                                <label for="groupName" class="form-label">Group Name</label>
+                                <input type="text" class="form-control" id="groupName" placeholder="Enter group name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Select Participants</label>
+                                <div class="border rounded-3 p-3" style="max-height: 200px; overflow-y: auto;">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="student1" value="student1">
+                                        <label class="form-check-label" for="student1">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                                    alt="Student" class="rounded-circle" width="24" height="24">
+                                                <span>Kate Malone</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="student2" value="student2">
+                                        <label class="form-check-label" for="student2">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Student"
+                                                    class="rounded-circle" width="24" height="24">
+                                                <span>John Smith</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="student3" value="student3">
+                                        <label class="form-check-label" for="student3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://randomuser.me/api/portraits/women/34.jpg"
+                                                    alt="Student" class="rounded-circle" width="24" height="24">
+                                                <span>Sarah Johnson</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="student4" value="student4">
+                                        <label class="form-check-label" for="student4">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Student"
+                                                    class="rounded-circle" width="24" height="24">
+                                                <span>Mike Davis</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Initial Message -->
+                        <div class="mb-3">
+                            <label for="initialMessage" class="form-label">Initial Message (Optional)</label>
+                            <textarea class="form-control" id="initialMessage" rows="3"
+                                placeholder="Type your first message..."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill"
+                            data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary rounded-pill">Start Chat</button>
                     </div>
                 </form>
             </div>

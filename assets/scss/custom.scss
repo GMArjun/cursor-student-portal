@@ -348,3 +348,312 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
   outline: 1.5px solid #f8954f;
   border-color: #f8954f;
 }
+
+// Chat System Styles
+.chat-sidebar {
+  background: #fff;
+  
+  .chat-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    
+    &:hover {
+      background: #f8f9fa;
+      border-color: #e9ecef;
+    }
+    
+    &.active {
+      background: #fdf3eb;
+      border-color: $primary;
+      
+      .fw-semibold {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.chat-messages-area {
+  background: #fff;
+  
+  .chat-header {
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .chat-messages {
+    background: #f8f9fa;
+    
+    .message {
+      &.incoming {
+        .message-bubble {
+          background: #fff;
+          border: 1px solid #e9ecef;
+        }
+      }
+      
+      &.outgoing {
+        .message-bubble {
+          background: $primary;
+          color: #fff;
+          border: 1px solid $primary;
+        }
+      }
+      
+      .message-bubble {
+        position: relative;
+        word-wrap: break-word;
+        max-width: 400px;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border: 6px solid transparent;
+        }
+      }
+      
+      &.incoming .message-bubble::before {
+        left: -12px;
+        border-right-color: #fff;
+        border-left: 0;
+      }
+      
+      &.outgoing .message-bubble::before {
+        right: -12px;
+        border-left-color: $primary;
+        border-right: 0;
+      }
+      
+      .message-image {
+        max-width: 300px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  .chat-input {
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    
+    textarea {
+      resize: none;
+      min-height: 44px;
+      max-height: 120px;
+      overflow-y: auto;
+      
+      &:focus {
+        box-shadow: none;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+// Typing Indicator Animation
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.typing-indicator {
+  .typing-dot {
+    animation: typing 1.4s infinite ease-in-out;
+    
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+// File Upload Styles
+.file-preview {
+  .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    
+    &:hover {
+      background-color: #dc3545;
+      border-color: #dc3545;
+      color: #fff;
+    }
+  }
+}
+
+// Chat Responsive Design
+@media (max-width: 991.98px) {
+  .chat-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+    height: 300px !important;
+  }
+  
+  .chat-messages-area {
+    height: 400px !important;
+  }
+  
+  .message-bubble {
+    max-width: 85% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .chat-sidebar {
+    height: 250px !important;
+  }
+  
+  .chat-messages-area {
+    height: 350px !important;
+  }
+  
+  .message-bubble {
+    max-width: 90% !important;
+  }
+  
+  .chat-header {
+    .btn {
+      width: 32px !important;
+      height: 32px !important;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// Chat Item Hover Effects
+.chat-item {
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Online Status Indicator
+.position-relative {
+  .bg-success {
+    box-shadow: 0 0 0 2px #fff;
+  }
+}
+
+// Message Timestamp
+.message small {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+// Chat Search Enhancement
+.chat-sidebar .input-group {
+  .form-control {
+    border-radius: 1.5rem;
+    padding-left: 2.5rem;
+  }
+  
+  .input-group-text {
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    border: none;
+    background: transparent;
+  }
+}
+
+// Chat Filters Enhancement
+.chat-sidebar .nav-pills {
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    
+    &.active {
+      background: $primary;
+      color: #fff;
+    }
+  }
+}
+
+// Modal Enhancements for Chat
+#newChatModal {
+  .form-check {
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    
+    &:hover {
+      background: #f8f9fa;
+    }
+    
+    .form-check-input:checked + .form-check-label {
+      color: $primary;
+    }
+  }
+  
+  .border {
+    border-color: #e9ecef !important;
+  }
+}
+
+// Utility for 2-line clamp
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Improved form-check alignment for checkboxes/radios in modals
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+}
+.form-check-input {
+  margin-top: 0 !important;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+// Radio group for chat type selection
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  .form-check {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+}
+
+// Primary color for checkbox and radio
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}
+.form-check-input:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 0.15rem rgba(248, 149, 79, 0.25);
+}
