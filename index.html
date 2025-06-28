@@ -19,12 +19,12 @@
     <div class="dashboard-bg">
         <!-- Header as full-width top bar -->
         <div class="container-fluid px-4 pt-3">
-            <div class="dashboard-header card rounded-4 p-3 px-4 d-flex flex-row align-items-center justify-content-between mx-auto mb-2"
+            <div class="dashboard-header card rounded-4 p-3 px-lg-4 d-flex flex-row align-items-center justify-content-between mx-auto mb-2"
                 style="min-height: 80px; max-width: 1600px;">
-                <button class="sidebar-toggle-btn d-lg-none me-2" id="sidebarToggle" aria-label="Open sidebar"><i
+                <button class="sidebar-toggle-btn d-lg-none me-2" style="flex-shrink: 0;" id="sidebarToggle" aria-label="Open sidebar"><i
                         class="bi bi-list"></i></button>
                 <div class="d-flex align-items-center flex-grow-1">
-                    <div class="sidebar-logo bg-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                    <div class="sidebar-logo bg-dark rounded-circle align-items-center justify-content-center me-3 d-none d-lg-flex"
                         style="width:44px; height:44px;">
                         <i class="bi bi-mortarboard text-white fs-4"></i>
                     </div>
@@ -119,7 +119,7 @@
                             id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile"
                                 class="rounded-circle" width="40" height="40">
-                            <div>
+                            <div class="d-none d-sm-block">
                                 <div class="fw-semibold">Kate Malone</div>
                                 <div class="text-muted small">Class 9A</div>
                             </div>

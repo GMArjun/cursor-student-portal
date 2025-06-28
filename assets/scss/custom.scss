@@ -757,3 +757,9 @@ h6,
 .dashboard-header {
   background: #fff;
 }
+
+#profileDropdown {
+  &:after {
+    content: none !important;
+  }
+}

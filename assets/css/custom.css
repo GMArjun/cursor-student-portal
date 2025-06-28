@@ -652,4 +652,8 @@ h6,
   background: #fff;
 }
 
+#profileDropdown:after {
+  content: none !important;
+}
+
 /*# sourceMappingURL=custom.css.map */
