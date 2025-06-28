@@ -101,10 +101,11 @@ $purple: #7c3aed; // modern purple
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   transition: box-shadow 0.2s;
+  margin-left: 90px;
   &:focus {
     box-shadow: 0 2px 8px 0 rgba(44, 62, 80, 0.08);
-    outline: 1.5px solid $primary;
-    border-color: $primary;
+    outline: 1px solid #babbbc !important;
+    border-color: #babbbc !important;
   }
 }
 
@@ -404,7 +405,7 @@ $purple: #7c3aed; // modern purple
     background: transparent;
   }
   .btn-close {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #f8954f;
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -799,4 +800,8 @@ h6,
   &:after {
     content: none !important;
   }
+}
+
+.fs-7{
+  font-size: 12px;
 }

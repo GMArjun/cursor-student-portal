@@ -88,11 +88,12 @@ html body {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   transition: box-shadow 0.2s;
+  margin-left: 90px;
 }
 .dashboard-search-bar:focus {
   box-shadow: 0 2px 8px 0 rgba(44, 62, 80, 0.08);
-  outline: 1.5px solid #f8954f;
-  border-color: #f8954f;
+  outline: 1px solid #babbbc !important;
+  border-color: #babbbc !important;
 }
 
 .card {
@@ -380,7 +381,7 @@ html body {
   background: transparent;
 }
 .modal-content .btn-close {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #f8954f;
   opacity: 0.7;
   transition: opacity 0.2s;
@@ -717,6 +718,10 @@ h6,
 
 #profileDropdown:after {
   content: none !important;
+}
+
+.fs-7 {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=custom.css.map */
