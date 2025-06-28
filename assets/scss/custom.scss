@@ -1,11 +1,12 @@
-$gray-bg: #f5f6fa;   // soft card background
+$gray-bg: #f5f6fa; // soft card background
 
 @use "sass:color";
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Fustat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   body {
     font-weight: 400;
     color: #495057;
@@ -17,9 +18,9 @@ html {
 $primary: #f8954f;
 $accent: #fbbd8b;
 $secondary: #2d3a4a; // deep blue
-$info: #4fc3f7;      // pastel blue
-$success: #43a047;   // pastel green
-$purple: #7c3aed;    // modern purple
+$info: #4fc3f7; // pastel blue
+$success: #43a047; // pastel green
+$purple: #7c3aed; // modern purple
 
 .dashboard-bg {
   background: #f6f7fb;
@@ -44,6 +45,7 @@ $purple: #7c3aed;    // modern purple
   align-items: flex-start;
   padding: 2rem 1.5rem;
   margin-right: 2rem;
+  overflow-y: auto;
   .sidebar-logo {
     background: #22223b;
   }
@@ -108,7 +110,8 @@ $purple: #7c3aed;    // modern purple
   }
   &.course-card {
     width: 100%;
-    box-shadow: 0 2px 12px 0 rgba(60, 72, 100, 0.06);
+    box-shadow: none;
+    position: relative;
     border: none;
     transition: box-shadow 0.2s, transform 0.2s;
     .badge {
@@ -117,8 +120,29 @@ $purple: #7c3aed;    // modern purple
       padding: 0.3em 0.9em;
     }
     &:hover {
-      box-shadow: 0 6px 24px 0 rgba(60, 72, 100, 0.12);
-      transform: translateY(-2px) scale(1.02);
+      transform: translateY(-2px) scale(1.01);
+    }
+  }
+  .course-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0 0 0 1rem;
+    font-size: 0.85em;
+    font-weight: 500;
+    z-index: 1;
+    &.in-progress {
+      background: $success;
+      color: #fff;
+    }
+    &.not-started {
+      background: $secondary;
+      color: #fff;
+    }
+    &.expired {
+      background: rgb(223, 57, 57);
+      color: #fff;
     }
   }
 }
@@ -130,6 +154,7 @@ $purple: #7c3aed;    // modern purple
     font-weight: 500;
     color: $primary;
     background: #fdf3eb;
+    font-size: 0.92rem;
     &.active {
       background: $primary;
       color: #fff;
@@ -145,11 +170,13 @@ $purple: #7c3aed;    // modern purple
   border-radius: 2rem;
   font-weight: 500;
 }
-.btn-primary, .bg-primary {
+.btn-primary,
+.bg-primary {
   background-color: $primary !important;
   border-color: $primary !important;
   color: #fff !important;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: darken($primary, 7%) !important;
     border-color: darken($primary, 7%) !important;
   }
@@ -251,8 +278,8 @@ $purple: #7c3aed;    // modern purple
 @media (min-width: 992px) {
   .dashboard-sidebar {
     position: sticky;
-    top: 24px;
-    height: calc(100vh - 48px);
+    top: 12px;
+    height: calc(100svh - 118px);
   }
 }
 
@@ -285,7 +312,7 @@ $purple: #7c3aed;    // modern purple
   border: 1.5px solid #f3f4fa;
   box-shadow: 0 8px 40px 0 rgba(60, 72, 100, 0.12);
   padding: 0.5rem 0;
-  transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   .modal-header {
     background: transparent;
     border: none;
@@ -350,7 +377,10 @@ $purple: #7c3aed;    // modern purple
 }
 
 // Remove box-shadow from all input, textarea, and select on focus
-input:focus, textarea:focus, select:focus, .form-control:focus {
+input:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
   box-shadow: none !important;
   outline: 1.5px solid #f8954f;
   border-color: #f8954f;
@@ -360,21 +390,21 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 .chat-sidebar {
   background: #fff;
   border-right: 1px solid #e9ecef;
-  
+
   .chat-item {
     cursor: pointer;
     transition: all 0.2s ease;
     border: 1px solid transparent;
-    
+
     &:hover {
       background: #f8f9fa;
       border-color: #e9ecef;
     }
-    
+
     &.active {
       background: #fdf3eb;
       border-color: $primary;
-      
+
       .fw-semibold {
         color: $primary;
       }
@@ -384,15 +414,15 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 
 .chat-messages-area {
   background: #fff;
-  
+
   .chat-header {
     background: #fff;
     border-bottom: 1px solid #e9ecef;
   }
-  
+
   .chat-messages {
     background: #f8f9fa;
-    
+
     .message {
       &.incoming {
         .message-bubble {
@@ -400,7 +430,7 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
           border: 1px solid #e9ecef;
         }
       }
-      
+
       &.outgoing {
         .message-bubble {
           background: $primary;
@@ -408,14 +438,14 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
           border: 1px solid $primary;
         }
       }
-      
+
       .message-bubble {
         position: relative;
         word-wrap: break-word;
         max-width: 400px;
-        
+
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -424,24 +454,24 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
           border: 6px solid transparent;
         }
       }
-      
+
       &.incoming .message-bubble::before {
         left: -12px;
         border-right-color: #fff;
         border-left: 0;
       }
-      
+
       &.outgoing .message-bubble::before {
         right: -12px;
         border-left-color: $primary;
         border-right: 0;
       }
-      
+
       .message-image {
         max-width: 300px;
         border-radius: 0.5rem;
         overflow: hidden;
-        
+
         img {
           width: 100%;
           height: auto;
@@ -450,17 +480,17 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
       }
     }
   }
-  
+
   .chat-input {
     background: #fff;
     border-top: 1px solid #e9ecef;
-    
+
     textarea {
       resize: none;
       min-height: 44px;
       max-height: 120px;
       overflow-y: auto;
-      
+
       &:focus {
         box-shadow: none;
         border-color: $primary;
@@ -471,7 +501,9 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 
 // Typing Indicator Animation
 @keyframes typing {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: translateY(0);
     opacity: 0.4;
   }
@@ -484,11 +516,11 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 .typing-indicator {
   .typing-dot {
     animation: typing 1.4s infinite ease-in-out;
-    
+
     &:nth-child(2) {
       animation-delay: 0.2s;
     }
-    
+
     &:nth-child(3) {
       animation-delay: 0.4s;
     }
@@ -500,7 +532,7 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
   .btn-outline-danger {
     border-color: #dc3545;
     color: #dc3545;
-    
+
     &:hover {
       background-color: #dc3545;
       border-color: #dc3545;
@@ -516,11 +548,11 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
     border-bottom: 1px solid #e9ecef;
     height: 300px !important;
   }
-  
+
   .chat-messages-area {
     height: 400px !important;
   }
-  
+
   .message-bubble {
     max-width: 85% !important;
   }
@@ -530,15 +562,15 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
   .chat-sidebar {
     height: 250px !important;
   }
-  
+
   .chat-messages-area {
     height: 350px !important;
   }
-  
+
   .message-bubble {
     max-width: 90% !important;
   }
-  
+
   .chat-header {
     .btn {
       width: 32px !important;
@@ -575,7 +607,7 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
     border-radius: 1.5rem;
     padding-left: 2.5rem;
   }
-  
+
   .input-group-text {
     position: absolute;
     left: 0;
@@ -588,10 +620,10 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
 // Chat Filters Enhancement
 .chat-sidebar .nav-pills {
   .nav-link {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
-    
+
     &.active {
       background: $primary;
       color: #fff;
@@ -606,16 +638,16 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
     border: 1px solid #e9ecef;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
-    
+
     &:hover {
       background: #f8f9fa;
     }
-    
+
     .form-check-input:checked + .form-check-label {
       color: $primary;
     }
   }
-  
+
   .border {
     border-color: #e9ecef !important;
   }
@@ -666,20 +698,31 @@ input:focus, textarea:focus, select:focus, .form-control:focus {
   box-shadow: 0 0 0 0.15rem rgba(248, 149, 79, 0.25);
 }
 
-
 .text-primary {
   color: $primary !important;
 }
 
 // Dual font for headings and bold text
-h1, h2, h3, h4, h5, h6, .fw-bold, .section-title, .dashboard-header h4, .card h4, .card h5, .card h6 {
-  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fw-bold,
+.section-title,
+.dashboard-header h4,
+.card h4,
+.card h5,
+.card h6 {
+  font-family: "Fustat", Arial, sans-serif;
   color: $secondary;
   letter-spacing: 0.01em;
 }
 
 // Sidebar active nav uses secondary color
-.dashboard-sidebar .nav-link.active, .dashboard-sidebar .nav-link:hover {
+.dashboard-sidebar .nav-link.active,
+.dashboard-sidebar .nav-link:hover {
   background: $secondary;
   color: #fff;
 }
@@ -691,7 +734,8 @@ h1, h2, h3, h4, h5, h6, .fw-bold, .section-title, .dashboard-header h4, .card h4
 }
 
 // Info button
-.btn-info, .bg-info {
+.btn-info,
+.bg-info {
   background-color: $info !important;
   border-color: $info !important;
   color: #fff !important;
@@ -703,11 +747,13 @@ h1, h2, h3, h4, h5, h6, .fw-bold, .section-title, .dashboard-header h4, .card h4
 }
 
 // Chat group avatars (experiment with purple)
-.chat-list .bg-primary, .chat-list .bg-success {
+.chat-list .bg-primary,
+.chat-list .bg-success {
   background: $purple !important;
 }
 
 // Card and dashboard-header backgrounds remain white for contrast
-.card, .dashboard-header {
+.card,
+.dashboard-header {
   background: #fff;
 }
