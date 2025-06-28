@@ -51,8 +51,9 @@ $purple: #7c3aed; // modern purple
   }
   .nav-link {
     color: #3c4864;
-    border-radius: 1.2rem;
+    border-radius: 0.7rem;
     font-weight: 500;
+    font-size: 0.88rem;
     transition: background 0.2s, color 0.2s;
     padding: 0.75rem 1.25rem;
     &.active,
@@ -93,6 +94,20 @@ $purple: #7c3aed; // modern purple
   gap: 2rem;
 }
 
+.dashboard-search-bar {
+  background: #f7f7fa;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: box-shadow 0.2s;
+  &:focus {
+    box-shadow: 0 2px 8px 0 rgba(44, 62, 80, 0.08);
+    outline: 1.5px solid $primary;
+    border-color: $primary;
+  }
+}
+
 .card {
   border: none;
   border-radius: 1.5rem;
@@ -122,6 +137,16 @@ $purple: #7c3aed; // modern purple
     &:hover {
       transform: translateY(-2px) scale(1.01);
     }
+    .ratio img {
+      border-radius: 0.75rem !important;
+    }
+    .rating-stars,
+    .d-flex.align-items-center.gap-2.mt-auto {
+      display: none !important;
+    }
+    .text-muted.mb-2 {
+      font-size: 0.85rem;
+    }
   }
   .course-status {
     position: absolute;
@@ -147,14 +172,14 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Pills
 .nav-pills {
   .nav-link {
     border-radius: 2rem;
     font-weight: 500;
     color: $primary;
     background: #fdf3eb;
-    font-size: 0.92rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
     &.active {
       background: $primary;
       color: #fff;
@@ -162,7 +187,31 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Buttons
+.badge {
+  &.bg-purple,
+  &.bg-primary,
+  &.bg-warning,
+  &.bg-info,
+  &.bg-success,
+  &.bg-secondary {
+    border-radius: 2rem !important;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.8rem;
+  }
+}
+
+.btn-outline-secondary {
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  color: #495057 !important;
+  border-color: #dee2e6;
+  &:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+    color: #343a40 !important;
+  }
+}
+
 .btn-primary,
 .btn-success,
 .btn-outline-secondary,
@@ -182,7 +231,6 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Search input
 .dashboard-search {
   .form-control {
     background: #f6f7fb;
@@ -196,7 +244,6 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Progress bar
 .progress {
   background: #e0e3eb;
   border-radius: 1rem;
@@ -205,12 +252,29 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Table
 .table {
   background: transparent;
+  .text-muted.small {
+    font-size: 0.8rem;
+  }
+  td, th {
+    padding: 0.6rem 0.75rem;
+  }
 }
 
-// Responsive sidebar overlay for < 992px
+.schedule-date-picker {
+  background: #f7f7fa;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  &:focus {
+    box-shadow: 0 2px 8px 0 rgba(44, 62, 80, 0.08);
+    outline: 1.5px solid $primary;
+    border-color: $primary;
+  }
+}
+
 @media (max-width: 991.98px) {
   .dashboard-wrapper {
     flex-direction: column;
@@ -283,7 +347,6 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Perfectly round and centered icon buttons
 .btn.rounded-circle {
   display: flex;
   align-items: center;
@@ -300,12 +363,10 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Profile dropdown spacing
 .dropdown-menu {
   margin-top: 0.75rem !important;
 }
 
-// Card-like modal style
 .modal-content {
   background: #fff;
   border-radius: 1.25rem;
@@ -354,7 +415,6 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// My Courses horizontal scroll
 .my-courses-list {
   overflow-x: auto;
   padding-bottom: 0.5rem;
@@ -370,13 +430,11 @@ $purple: #7c3aed; // modern purple
   }
 }
 
-// Faded style for expired courses
 .expired-course {
   opacity: 0.6;
   filter: grayscale(0.2);
 }
 
-// Remove box-shadow from all input, textarea, and select on focus
 input:focus,
 textarea:focus,
 select:focus,
@@ -386,7 +444,6 @@ select:focus,
   border-color: #f8954f;
 }
 
-// Chat System Styles
 .chat-sidebar {
   background: #fff;
   border-right: 1px solid #e9ecef;
@@ -499,7 +556,6 @@ select:focus,
   }
 }
 
-// Typing Indicator Animation
 @keyframes typing {
   0%,
   60%,
@@ -527,7 +583,6 @@ select:focus,
   }
 }
 
-// File Upload Styles
 .file-preview {
   .btn-outline-danger {
     border-color: #dc3545;
@@ -541,7 +596,6 @@ select:focus,
   }
 }
 
-// Chat Responsive Design
 @media (max-width: 991.98px) {
   .chat-sidebar {
     border-right: none;
@@ -580,7 +634,6 @@ select:focus,
   }
 }
 
-// Chat Item Hover Effects
 .chat-item {
   &:hover {
     transform: translateY(-1px);
@@ -588,20 +641,17 @@ select:focus,
   }
 }
 
-// Online Status Indicator
 .position-relative {
   .bg-success {
     box-shadow: 0 0 0 2px #fff;
   }
 }
 
-// Message Timestamp
 .message small {
   font-size: 0.75rem;
   opacity: 0.7;
 }
 
-// Chat Search Enhancement
 .chat-sidebar .input-group {
   .form-control {
     border-radius: 1.5rem;
@@ -617,7 +667,6 @@ select:focus,
   }
 }
 
-// Chat Filters Enhancement
 .chat-sidebar .nav-pills {
   .nav-link {
     font-size: 0.78rem;
@@ -631,7 +680,6 @@ select:focus,
   }
 }
 
-// Modal Enhancements for Chat
 #newChatModal {
   .form-check {
     padding: 0.75rem;
@@ -653,7 +701,6 @@ select:focus,
   }
 }
 
-// Utility for 2-line clamp
 .clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -661,7 +708,6 @@ select:focus,
   overflow: hidden;
 }
 
-// Improved form-check alignment for checkboxes/radios in modals
 .form-check {
   display: flex;
   align-items: center;
@@ -678,7 +724,6 @@ select:focus,
   flex-shrink: 0;
 }
 
-// Radio group for chat type selection
 .radio-group {
   display: flex;
   gap: 1rem;
@@ -688,7 +733,6 @@ select:focus,
   }
 }
 
-// Primary color for checkbox and radio
 .form-check-input:checked {
   background-color: $primary;
   border-color: $primary;
@@ -702,7 +746,6 @@ select:focus,
   color: $primary !important;
 }
 
-// Dual font for headings and bold text
 h1,
 h2,
 h3,
@@ -720,20 +763,17 @@ h6,
   letter-spacing: 0.01em;
 }
 
-// Sidebar active nav uses secondary color
 .dashboard-sidebar .nav-link.active,
 .dashboard-sidebar .nav-link:hover {
   background: $secondary;
   color: #fff;
 }
 
-// Modern purple for badges
 .badge.bg-purple {
   background: $purple;
   color: #fff;
 }
 
-// Info button
 .btn-info,
 .bg-info {
   background-color: $info !important;
@@ -741,18 +781,15 @@ h6,
   color: #fff !important;
 }
 
-// Success badge (pastel green)
 .badge.bg-success {
   background: $success !important;
 }
 
-// Chat group avatars (experiment with purple)
 .chat-list .bg-primary,
 .chat-list .bg-success {
   background: $purple !important;
 }
 
-// Card and dashboard-header backgrounds remain white for contrast
 .card,
 .dashboard-header {
   background: #fff;
