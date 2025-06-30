@@ -30,8 +30,8 @@
                     </div>
                     <span class="fw-bold fs-5 me-3">Navora</span>
                     <form class="d-none d-md-flex flex-grow-1 me-2" role="search" style="max-width: 500px;">
-                        <input class="form-control dashboard-search-bar" type="search"
-                            placeholder="Search tasks, courses, schedules..." aria-label="Search">
+                        <input class="form-control dashboard-search-bar" type="search" placeholder="Search Courses"
+                            aria-label="Search">
                     </form>
                 </div>
                 <div class="d-flex align-items-center gap-2 ms-auto">
@@ -152,7 +152,8 @@
                                     <span class="badge bg-purple ms-2">3</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="#"><i
                                         class="bi bi-calendar-event me-2"></i>Schedules</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-chat-dots me-2"></i>Chat</a>
+                            <li class="nav-item"><a class="nav-link" href="#"><i
+                                        class="bi bi-chat-dots me-2"></i>Chat</a>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#"><i
                                         class="bi bi-award me-2"></i>Certificates</a></li>
@@ -176,12 +177,22 @@
                     <div class="row flex-grow-1 g-2 dashboard-content-row">
                         <!-- My tasks -->
                         <div class="col-12 col-lg-6 d-flex flex-column">
-                            <div class="card p-3 py-3 mb-2 rounded-4 text-center d-flex align-items-center">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor" class="rounded-circle mb-3" width="90" height="90">
-                                <h5 class="fw-bold mb-2">Mr. Hodge</h5>
-                                <span class="badge bg-primary">Senior Science Mentor</span>
-                                <div class="mt-3 small">10+ years experience in STEM education, passionate
+                            <div class="card p-4 mb-2 rounded-4">
+                                <h4 class="fw-bold mb-3">Mentor</h4>
+                                <div class="d-flex flex-column flex-lg-row text-center text-lg-start gap-3 mb-3 align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor"
+                                        class="rounded-circle" width="90" height="90">
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Mr. Hodge</h5>
+                                        <span class="badge bg-primary">Senior Science Mentor</span>
+                                    </div>
+                                </div>
+                                <div class="small text-center text-lg-start">10+ years experience in STEM education, passionate
                                     about helping students excel in science and research projects.</div>
+                                <div class="d-flex flex-sm-row flex-column gap-2 mt-3">
+                                    <button class="btn btn-outline-secondary rounded-pill w-100">Chat with mentor</button>
+                                    <button class="btn btn-outline-secondary rounded-pill w-100">Schedule a call</button>
+                                </div>
                             </div>
                             <div class="card rounded-4 p-4 flex-fill">
                                 <div class="d-flex align-items-center justify-content-between mb-3">
@@ -306,52 +317,53 @@
                                     <table class="table align-middle mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="text-muted small">Time</th>
-                                                <th class="text-muted small">Lesson</th>
-                                                <th class="text-muted small">Teacher</th>
-                                                <th class="text-muted small">Location</th>
+                                                <th class="text-muted small">Scheduled At</th>
+                                                <th class="text-muted small">Title</th>
+                                                <th class="text-muted small">Created By</th>
+                                                <th class="text-muted small">Assigned To</th>
+                                                <th class="text-muted small">Join Meeting</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr class="small">
                                                 <td class="small">8:30 AM</td>
                                                 <td>Math</td>
-                                                <td><img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                                        class="rounded-circle me-2" width="28" height="28"> Mrs. Goodman
-                                                </td>
+                                                <td> Mrs. Goodman</td>
                                                 <td>B3, Room 124</td>
+                                                <td class="text-center"><a href="#"
+                                                        class="btn btn-primary btn-sm rounded-pill">Join</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr class="small">
                                                 <td class="small">8:30 AM</td>
                                                 <td>Math</td>
-                                                <td><img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                                        class="rounded-circle me-2" width="28" height="28"> Mrs. Goodman
-                                                </td>
+                                                <td> Mrs. Goodman</td>
                                                 <td>B3, Room 124</td>
+                                                <td class="text-center"><a href="#"
+                                                        class="btn btn-primary btn-sm rounded-pill">Join</a></td>
                                             </tr>
-                                            <tr>
-                                                <td class="small">10:30 AM</td>
-                                                <td>ELA</td>
-                                                <td><img src="https://randomuser.me/api/portraits/women/46.jpg"
-                                                        class="rounded-circle me-2" width="28" height="28"> Ms. Melton
-                                                </td>
-                                                <td>B2, Room 158</td>
+                                            <tr class="small">
+                                                <td class="small">8:30 AM</td>
+                                                <td>Math</td>
+                                                <td> Mrs. Goodman</td>
+                                                <td>B3, Room 124</td>
+                                                <td class="text-center"><a href="#"
+                                                        class="btn btn-primary btn-sm rounded-pill">Join</a></td>
                                             </tr>
-                                            <tr>
-                                                <td class="small">12:00 AM</td>
-                                                <td>Biology</td>
-                                                <td><img src="https://randomuser.me/api/portraits/men/47.jpg"
-                                                        class="rounded-circle me-2" width="28" height="28"> Mr. Hodge
-                                                </td>
-                                                <td>B3, Room 310</td>
+                                            <tr class="small">
+                                                <td class="small">8:30 AM</td>
+                                                <td>Math</td>
+                                                <td> Mrs. Goodman</td>
+                                                <td>B3, Room 124</td>
+                                                <td class="text-center"><a href="#"
+                                                        class="btn btn-primary btn-sm rounded-pill">Join</a></td>
                                             </tr>
-                                            <tr>
-                                                <td class="small">02:00 PM</td>
-                                                <td>Social Studies</td>
-                                                <td><img src="https://randomuser.me/api/portraits/women/48.jpg"
-                                                        class="rounded-circle me-2" width="28" height="28"> Mrs. Murray
-                                                </td>
-                                                <td>B1, Room 112</td>
+                                            <tr class="small">
+                                                <td class="small">8:30 AM</td>
+                                                <td>Math</td>
+                                                <td> Mrs. Goodman</td>
+                                                <td>B3, Room 124</td>
+                                                <td class="text-center"><a href="#"
+                                                        class="btn btn-primary btn-sm rounded-pill">Join</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -520,6 +532,7 @@
                                                         <th>Description</th>
                                                         <th>Status</th>
                                                         <th>Assigned Mentor</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -530,6 +543,12 @@
                                                         <td><span class="badge bg-primary rounded-pill">To-do</span>
                                                         </td>
                                                         <td>Ms. Melton</td>
+                                                        <td>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#addTaskModal"
+                                                                class="btn btn-primary btn-sm rounded-pill">
+                                                                <i class="bi bi-pencil-square"></i> Edit</a>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Science project submission</td>
@@ -539,6 +558,12 @@
                                                                 class="badge bg-warning text-dark rounded-pill">Pending</span>
                                                         </td>
                                                         <td>Unassigned</td>
+                                                        <td>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#addTaskModal"
+                                                                class="btn btn-primary btn-sm rounded-pill">
+                                                                <i class="bi bi-pencil-square"></i> Edit</a>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Essay review</td>
@@ -547,6 +572,12 @@
                                                                 Progress</span>
                                                         </td>
                                                         <td>Mr. Hodge</td>
+                                                        <td>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#addTaskModal"
+                                                                class="btn btn-primary btn-sm rounded-pill">
+                                                                <i class="bi bi-pencil-square"></i> Edit</a>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Lab report correction</td>
@@ -554,6 +585,12 @@
                                                         <td><span class="badge bg-success rounded-pill">Resolved</span>
                                                         </td>
                                                         <td>Ms. Murray</td>
+                                                        <td>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#addTaskModal"
+                                                                class="btn btn-primary btn-sm rounded-pill">
+                                                                <i class="bi bi-pencil-square"></i> Edit</a>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -589,26 +626,20 @@
                                             <table class="table align-middle mb-0">
                                                 <thead>
                                                     <tr>
-                                                        <th>Date & Time</th>
-                                                        <th>Mentor Name</th>
-                                                        <th>Title of Session</th>
-                                                        <th>Join Meeting</th>
+                                                        <th>Scheduled At</th>
+                                                        <th>Title</th>
+                                                        <th>Created By</th>
+                                                        <th>Assigned To</th>
+                                                        <th class="text-center">Join</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>June 10, 2024, 10:00 AM</td>
-                                                        <td>Ms. Melton</td>
-                                                        <td>Algebra Doubt Clearing</td>
-                                                        <td><a href="#"
-                                                                class="btn btn-primary btn-sm rounded-pill">Join</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>June 12, 2024, 2:00 PM</td>
+                                                        <td>Maths</td>
+                                                        <td>Mrs. Goodman</td>
                                                         <td>Mr. Hodge</td>
-                                                        <td>Science Project Guidance</td>
-                                                        <td><a href="#"
+                                                        <td class="text-center"><a href="#"
                                                                 class="btn btn-primary btn-sm rounded-pill">Join</a>
                                                         </td>
                                                     </tr>
@@ -623,26 +654,18 @@
                                             <table class="table align-middle mb-0">
                                                 <thead>
                                                     <tr>
-                                                        <th>Date & Time</th>
-                                                        <th>Mentor Name</th>
-                                                        <th>Title of Session</th>
-                                                        <th>Status</th>
+                                                        <th>Scheduled At</th>
+                                                        <th>Title</th>
+                                                        <th>Created By</th>
+                                                        <th>Assigned To</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>May 28, 2024, 11:00 AM</td>
-                                                        <td>Ms. Murray</td>
-                                                        <td>Essay Review</td>
-                                                        <td><span class="badge bg-secondary rounded-pill">Expired</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>May 20, 2024, 9:00 AM</td>
-                                                        <td>Ms. Melton</td>
-                                                        <td>Math Test Prep</td>
-                                                        <td><span class="badge bg-secondary rounded-pill">Expired</span>
-                                                        </td>
+                                                        <td>June 10, 2024, 10:00 AM</td>
+                                                        <td>Maths</td>
+                                                        <td>Mrs. Goodman</td>
+                                                        <td>Mr. Hodge</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1155,8 +1178,14 @@
                             <input type="date" class="form-control" id="scheduleDate" required>
                         </div>
                         <div class="mb-3">
-                            <label for="scheduleTime" class="form-label">Time <span class="text-danger">*</span></label>
-                            <input type="time" class="form-control" id="scheduleTime" required>
+                            <label for="scheduleStartTime" class="form-label">Start Time <span
+                                    class="text-danger">*</span></label>
+                            <input type="time" class="form-control" id="scheduleStartTime" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="scheduleEndTime" class="form-label">End Time <span
+                                    class="text-danger">*</span></label>
+                            <input type="time" class="form-control" id="scheduleEndTime" required>
                         </div>
                         <div class="mb-3">
                             <label for="scheduleMentorSelect" class="form-label">Select Mentor <span
